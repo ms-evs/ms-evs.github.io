@@ -16,6 +16,8 @@ Script + links
 ## Cite
 
 ... How to cite ...
++ License
+
 
 ## More information
 Disclaimer about labels 
