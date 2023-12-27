@@ -1,6 +1,3 @@
-# MS-EVS Dataset 
-From **MS-EVS: Multispectral event-based vision for deep learning based face detection** (WACV 2024)
-
 ![ms-evs](https://github.com/ms-evs/ms-evs.github.io/assets/79908627/066f65a8-7acb-4895-b87e-b40decb13390)
 
 ## Overview
