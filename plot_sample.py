@@ -81,7 +81,12 @@ if __name__ == "__main__":
 
     with h5py.File(args.file_path, 'r') as file:
         # Get data
-        events = file['device0/events']
+        try:
+            events = file['device0/events']
+            spectralface = False
+        except KeyError:
+            events = file['device0/events_ch8']
+            spectralface = True
         images = file['device0/images']
         labels = file['device0/gt/bbox_landmarks']
         
@@ -95,6 +100,8 @@ if __name__ == "__main__":
         # Iterate over each sample to plot
         for row, t in enumerate(ts_to_plot):
             rgb = images['frames'][np.where(ts_images==t)[0][0]]
+            if spectralface:  # Use Grayscale
+                rgb = rgb[:,:,[8,8,8]]
             event_binary_image = binary_representation(events, t, rgb.shape)
             event_polarity_image = polarity_representation(events, t, rgb.shape, transparent_bg=True)
             bbox_image = bboxes_on_transparent_bg(labels, t, rgb.shape)
