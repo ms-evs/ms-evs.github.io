@@ -109,7 +109,7 @@ a {
   color: $header-heading-color;
   text-align: center;
   background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  background-image: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   @include large {
     padding: 5rem 6rem;
@@ -167,7 +167,7 @@ a {
   }
 
   @include large {
-    max-width: 32rem;
+    max-width: 80rem;
     padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
