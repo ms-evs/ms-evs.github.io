@@ -11,15 +11,12 @@
   </head>
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
-      {% if site.title and site.title != page.title %}
-      <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
-      {% endif %}
 
       {{ content }}
 
       {% if site.github.private != true and site.github.license %}
       <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
-        This site is maintained by Saad Himmi. Help: shimmi.contact@gmail.com
+        This site is maintained by Saad Himmi (shimmi.contact@gmail.com)
       </div>
       {% endif %}
     </div>
