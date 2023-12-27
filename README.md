@@ -26,9 +26,21 @@ It is divided in four subsets:
 
 ## How to download
 
-Script + links 
+As the MS-EVS Dataset is quite big (a few hundred GBs), we compressed all the h5 files and split the dataset into many different subsets.
 
-- Full, light, sample
+General procedure:
+- **Select** the relevant datasets for your project
+- **Download** the selected files, e.g. with `wget `
+- **Uncompress** the h5 files (`zstd -d ./path/to/compressed/file.h5.zst -o ./path/to/uncompressed/file.h5`)
+- **Enjoy!**
+- Optional: use our [demo scripts](#useful-scripts) to see the HDF5 file structure or plot samples from the files (image, events and labels)
+
+### FULL MS-EVS Dataset: All channels (RGB, Multispectral, Grayscale)
+- TODO
+
+### LIGHT MS-EVS Dataset: Grayscale only (~3 times lighter)
+
+### DEMO MS-EVS Samples: A selection of files to quickly explore the data
 
 ## Cite
 
@@ -49,9 +61,12 @@ Saad Himmi, Vincent Parret, Ajad Chhatkuli, and Luc Van Gool. Ms-evs: Multispect
 This dataset is distributed under the permissive **MIT License**.
 
 ## More information
-⚠️ **Disclaimer:** All datasets have been automatically labeled (either from scratch or to complete existing manual labels) using an existing face detector ([YOLOv5](https://github.com/ultralytics/yolov5)) and therefore contain some (relatively few) wrong/missing bounding boxes. Any contribution is greatly appreciated.
-
 [[paper](https://openaccess.thecvf.com/content/WACV2024/papers/Himmi_MS-EVS_Multispectral_Event-Based_Vision_for_Deep_Learning_Based_Face_Detection_WACV_2024_paper.pdf)][[supp](https://openaccess.thecvf.com/content/WACV2024/supplemental/Himmi_MS-EVS_Multispectral_Event-Based_WACV_2024_supplemental.pdf)][[poster](https://github.com/ms-evs/ms-evs.github.io/blob/40d657cce1f60f32b6745c5514daeeef5d18d1aa/wacv24-poster.pdf)]
 
+**Have a look at the supplementary material** for more information about the dataset composition, capture, cleaning and labelling.
+
+⚠️ **Disclaimer:** All datasets have been automatically labeled (either from scratch or to complete existing manual labels) using an existing face detector ([YOLOv5](https://github.com/ultralytics/yolov5)) and therefore contain some (relatively few) wrong/missing bounding boxes. Any contribution is greatly appreciated.
+
+## Useful scripts
 - Script to read data (h5py --> dict) https://github.com/ms-evs/ms-evs.github.io/blob/841c390a61c43e589ccc7561fa90b7390994e55e/inspect_h5_tree.py
 - Script to display image + events + labels https://github.com/ms-evs/ms-evs.github.io/blob/841c390a61c43e589ccc7561fa90b7390994e55e/plot_sample.py
