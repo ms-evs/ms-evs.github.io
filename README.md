@@ -30,17 +30,46 @@ As the MS-EVS Dataset is quite big (a few hundred GBs), we compressed all the h5
 
 General procedure:
 - **Select** the relevant datasets for your project
-- **Download** the selected files, e.g. with `wget `
+- **Download** the selected files, e.g. with `wget -np -R "index.html*" -c -nH -r http://ms-evs.aisoft.org/link/to/subset/` (change link)
 - **Uncompress** the h5 files (`zstd -d ./path/to/compressed/file.h5.zst -o ./path/to/uncompressed/file.h5`)
 - **Enjoy!**
-- Optional: use our [demo scripts](#useful-scripts) to see the HDF5 file structure or plot samples from the files (image, events and labels)
+- Optional: have a look at our [demo scripts](#useful-scripts) to inspect the dataset files.
 
-### FULL MS-EVS Dataset: All channels (RGB, Multispectral, Grayscale)
-- TODO
+### MS-EVS Dataset: All channels (RGB, Multispectral, Grayscale)
+
+<details>
+  <summary>Click to see the download links (for wget)</summary>
+  
+- N-YoutubeFaces (211G) : https://ms-evs.aisoft.org/N-YoutubeFaces/full/
+- N-MobiFace (83G) : https://ms-evs.aisoft.org/N-MobiFace/full/
+- N-SpectralFace (25G) : https://ms-evs.aisoft.org/N-SpectralFace/full/
+- Real-SpectralFace () : Coming soon...
+
+</details>
 
 ### LIGHT MS-EVS Dataset: Grayscale only (~3 times lighter)
+<details>
+  <summary>Click to see the download links (for wget)</summary>
+  
+- N-YoutubeFaces (103G) : https://ms-evs.aisoft.org/N-YoutubeFaces/gs/
+- N-MobiFace (30G) : https://ms-evs.aisoft.org/N-MobiFace/gs/
+- N-SpectralFace (15G) : https://ms-evs.aisoft.org/N-SpectralFace/gs/
+- Real-SpectralFace () : Coming soon...
+
+</details>
 
 ### DEMO MS-EVS Samples: A selection of files to quickly explore the data
+<details>
+  <summary>Click to see the download links (for wget)</summary>
+  
+- N-YoutubeFaces (1.2G) : https://ms-evs.aisoft.org/N-YoutubeFaces/sample/
+- N-MobiFace (1.5G) : https://ms-evs.aisoft.org/N-MobiFace/sample/
+- N-SpectralFace (2.5G) : https://ms-evs.aisoft.org/N-SpectralFace/sample/
+- Real-SpectralFace () : Coming soon...
+
+</details>
+
+**BONUS:** Some files (8.5G) were removed from N-SpectralFace but can be downloaded here (https://ms-evs.aisoft.org/N-SpectralFace/extra/) : it is either captured under regular office light (LED) so it does not have infrared illumination (not used for our experiments) AND/OR it contains obvious labelling/calibration/syncing issues.
 
 ## Cite
 
@@ -68,5 +97,9 @@ This dataset is distributed under the permissive **MIT License**.
 ⚠️ **Disclaimer:** All datasets have been automatically labeled (either from scratch or to complete existing manual labels) using an existing face detector ([YOLOv5](https://github.com/ultralytics/yolov5)) and therefore contain some (relatively few) wrong/missing bounding boxes. Any contribution is greatly appreciated.
 
 ## Useful scripts
-- Script to read data (h5py --> dict) https://github.com/ms-evs/ms-evs.github.io/blob/841c390a61c43e589ccc7561fa90b7390994e55e/inspect_h5_tree.py
-- Script to display image + events + labels https://github.com/ms-evs/ms-evs.github.io/blob/841c390a61c43e589ccc7561fa90b7390994e55e/plot_sample.py
+
+Use the following script to see the HDF5 data dictionary structure: [link](https://github.com/ms-evs/ms-evs.github.io/blob/841c390a61c43e589ccc7561fa90b7390994e55e/inspect_h5_tree.py). The structure depends on the number of devices used to record the dataset (1 for N-MobiFace and YoutubeFaces, 2 for the SpectralFace datasets) or the number of channels (RGB, Multispectral, GS+IR...) 
+
+The images, events and labels are all aligned and temporally synced! One can use [this script](https://github.com/ms-evs/ms-evs.github.io/blob/841c390a61c43e589ccc7561fa90b7390994e55e/plot_sample.py) to display synchronized data. This can serve 1)as an example on how to handle HDF5 files and/or events, or 2)as a way to quickly inspect files' data.
+
+Use this script to automatically download and uncompress all the DEMO MS-EVS Samples (~5.2G total). This script can be easily modified to download/uncompress the MS-EVS Dataset (or LIGHT version).
