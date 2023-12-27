@@ -30,7 +30,7 @@ General procedure:
 - **Download** the selected files, e.g. with `wget -np -R "index.html*" -c -nH -r http://ms-evs.aisoft.org/link/to/subset/` (change link)
 - **Uncompress** the h5 files (`zstd -d ./path/to/compressed/file.h5.zst -o ./path/to/uncompressed/file.h5`)
 - **Enjoy!**
-- Optional: have a look at our [demo scripts](#useful-scripts) to inspect the dataset files.
+- Optional: have a look at our [demo scripts](#useful-scripts) for a programmatic way to download all files and some functions to inspect the dataset files.
 
 **MS-EVS Dataset: All channels (RGB, Multispectral, Grayscale)**
 - N-YoutubeFaces (211G) : [https://ms-evs.aisoft.org/N-YoutubeFaces/full/](https://ms-evs.aisoft.org/N-YoutubeFaces/full/)
@@ -80,8 +80,8 @@ This dataset is distributed under the permissive **MIT License**.
 
 ## Useful scripts
 
+Use this script ([download_ms_evs_demo.sh](https://github.com/ms-evs/ms-evs.github.io/blob/5f020bedff7004275def53a119843f013c902a01/download_ms_evs_demo.sh)) to automatically download and uncompress all the DEMO MS-EVS Samples (~5.2G total). This script can be easily modified to download/uncompress the MS-EVS Dataset (or LIGHT version).
+
 Use the following script to see the HDF5 data dictionary structure: [inspect_h5_tree.py](https://github.com/ms-evs/ms-evs.github.io/blob/841c390a61c43e589ccc7561fa90b7390994e55e/inspect_h5_tree.py). The structure depends on the number of devices used to record the dataset (1 for N-MobiFace and YoutubeFaces, 2 for the SpectralFace datasets) or the number of channels (RGB, Multispectral, GS+IR...) 
 
 The images, events and labels are all aligned and temporally synced! One can use [plot_sample.py](https://github.com/ms-evs/ms-evs.github.io/blob/841c390a61c43e589ccc7561fa90b7390994e55e/plot_sample.py) to display synchronized data. This can serve 1)as an example on how to handle HDF5 files and/or events, or 2)as a way to quickly inspect files' data.
-
-Use this script ([download_ms_evs_demo.sh](https://github.com/ms-evs/ms-evs.github.io/blob/5f020bedff7004275def53a119843f013c902a01/download_ms_evs_demo.sh)) to automatically download and uncompress all the DEMO MS-EVS Samples (~5.2G total). This script can be easily modified to download/uncompress the MS-EVS Dataset (or LIGHT version).
