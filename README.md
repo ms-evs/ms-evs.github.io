@@ -26,6 +26,7 @@ It is divided in four subsets:
 As the MS-EVS Dataset is quite big (a few hundred GBs), we compressed all the h5 files and split the dataset into many different subsets.
 
 General procedure:
+- Before: Make sure you have the ZStandard compression tool: `sudo apt install zstd`
 - **Select** the relevant datasets for your project
 - **Download** the selected files, e.g. with `wget -np -R "index.html*" -c -nH -r http://ms-evs.aisoft.org/link/to/subset/` (change link)
 - **Uncompress** the h5 files (`zstd -d ./path/to/compressed/file.h5.zst -o ./path/to/uncompressed/file.h5`)
