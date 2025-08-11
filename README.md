@@ -34,22 +34,22 @@ General procedure:
 - Optional: have a look at our [demo scripts](#useful-scripts) for a programmatic way to download all files and some functions to inspect the dataset files.
 
 **MS-EVS Dataset: All channels (RGB, Multispectral, Grayscale)**
-- N-YoutubeFaces (211G) : [https://ms-evs.aisoft.org/N-YoutubeFaces/full/](https://ms-evs.aisoft.org/N-YoutubeFaces/full/)
-- N-MobiFace (83G) : [https://ms-evs.aisoft.org/N-MobiFace/full/](https://ms-evs.aisoft.org/N-MobiFace/full/)
+- N-YoutubeFaces (211G) : _Down (contact me if needed)_
+- N-MobiFace (83G) : _Down (contact me if needed_)
 - N-SpectralFace (25G) : [https://ms-evs.aisoft.org/N-SpectralFace/full/](https://ms-evs.aisoft.org/N-SpectralFace/full/)
-- Real-SpectralFace (~1.5G) : Available on-demand (By e-mail, saad.himmi@sony.com)
+- Real-SpectralFace (~1.5G) : _Available on-demand (By e-mail, saad.himmi@sony.com)_
 
 **LIGHT MS-EVS Dataset: Grayscale only (~3 times lighter)**
-- N-YoutubeFaces (103G) : [https://ms-evs.aisoft.org/N-YoutubeFaces/gs/](https://ms-evs.aisoft.org/N-YoutubeFaces/gs/)
-- N-MobiFace (30G) : [https://ms-evs.aisoft.org/N-MobiFace/gs/](https://ms-evs.aisoft.org/N-MobiFace/gs/)
+- N-YoutubeFaces (103G) : _Down (contact me if needed)_
+- N-MobiFace (30G) : _Down (contact me if needed)_
 - N-SpectralFace (15G) : [https://ms-evs.aisoft.org/N-SpectralFace/gs/](https://ms-evs.aisoft.org/N-SpectralFace/gs/)
-- Real-SpectralFace (<1G) : Available on-demand (By e-mail, saad.himmi@sony.com)
+- Real-SpectralFace (<1G) : _Available on-demand (By e-mail, saad.himmi@sony.com)_
 
 **DEMO MS-EVS Samples: A selection of files to quickly explore the data**
-- N-YoutubeFaces (1.2G) : [https://ms-evs.aisoft.org/N-YoutubeFaces/sample/](https://ms-evs.aisoft.org/N-YoutubeFaces/sample/)
-- N-MobiFace (1.5G) : [https://ms-evs.aisoft.org/N-MobiFace/sample/](https://ms-evs.aisoft.org/N-MobiFace/sample/)
+- N-YoutubeFaces (1.2G) : _Down (contact me if needed)_
+- N-MobiFace (1.5G) : _Down (contact me if needed)_
 - N-SpectralFace (2.5G) : [https://ms-evs.aisoft.org/N-SpectralFace/sample/](https://ms-evs.aisoft.org/N-SpectralFace/sample/)
-- Real-SpectralFace (A few MBs) : Available on-demand (By e-mail, saad.himmi@sony.com)
+- Real-SpectralFace (A few MBs) : _Available on-demand (By e-mail, saad.himmi@sony.com)_
 
 
 **BONUS:** Some files (8.5G) were removed from N-SpectralFace but can be downloaded here ([https://ms-evs.aisoft.org/N-SpectralFace/extra/](https://ms-evs.aisoft.org/N-SpectralFace/extra/)) : it is either captured under regular office light (LED) so it does not have infrared illumination (not used for our experiments) AND/OR it contains obvious labelling/calibration/syncing issues.
